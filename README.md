@@ -22,7 +22,31 @@ Make sure your Ethernet cable utilises the standard colour coding, otherwise the
 Cut one end of the Ethernet cable, strip the isolation from each wire. 
 Also cut the DC plug from the step-up module and strip the isolation
 
-Use this wiring diagram to connect all the components
+### Wiring diagram
+
+Here's the wiring diagram following TIA/EIA 568b's Wiring Color Codes. If your Ethernet cable uses another color coding scheme you have to translate the given colors to TIA/EIA 568b.
+
+                                    -----------------------------------
+(8) brown        ------------------\|                                 |
+(6) green        -------------------| P             SERIAL TO         |
+                                    |                               ----- 
+(7) brown/white  - - - - - - - - - -| A                 485             USB
+(3) green/white  - - - - - - - - - /|                                   USB
+                                    |               CONVERTER       -----    
+                                    | GND                             |
+                                    |                                 |
+                                    -----------------------------------
+
+
+                                    -----------------------------------
+(2) orange       ------------------\|                                 |
+(5) blue/white   - - - - - - - - - -| 9V             STEP-UP        -----  
+                                    |                                   USB
+                                    |                                   USB
+(1) orange/white - - - - - - - - - -| GND            MODULE         -----    
+(4) blue         ------------------/|                                 |    
+                                    -----------------------------------
+
 
 [Link Text](https://user-images.githubusercontent.com/34777492/34322805-44756d5c-e832-11e7-8b26-ca0587022e24.jpg)
 
