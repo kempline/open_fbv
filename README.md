@@ -8,9 +8,12 @@ Besides RS-485 communication, each pedal needs a suply voltage of 7,5V. In Line6
 ## Building the hardware interface
 ### Components/Shopping List
 
-1. USB to RS485 TTL Serial Converter
-2. DC 5V to DC 9V Step up Converter
+1. USB to RS485 TTL Serial Converter: There are plenty of those modules available, e.g. ebay.com. I tested modules with the following description: USB to RS485 TTL Serial Converter Adapter FTDI interface FT232RL 75176 Module.
+
+2. DC 5V to DC 9V Step up Converter: Again, there are many different variants of such modules available online. I just picked one randomly and made good experiences with the step up converter.
+
 3. USB A to B printer/scanner cable
+
 4. RJ45 Ethernet Cable
 
 ### Wiring diagram
@@ -38,11 +41,4 @@ Here's the wiring diagram following TIA/EIA 568b's Wiring Color Codes. If your E
 ```
 
 ### Bringing it all together
-- Cut one end of the Ethernet cable, strip the isolation from each wire
-- Cut the DC plug from the step-up module and strip the isolation
-- Connect the unisolated wires from the Ethernet cable according to the wiring diagram to the serial to RS485 converter as well as the step up module. It is s also possible to use a wall power supply instead of the step up module. Just make sure you're using proper polarity. Every voltage between +7,5V and +9V should be fine.
-- Connect the serial to RS485 module to the computer using the USB A to B printer/scanner cable
-- Connect the setp up module to the computer
-
-### Testing the hardware
-
+- Cut one end of the Ethernet cable
