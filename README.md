@@ -1,18 +1,17 @@
 # open_fbv
 
 ## Introduction
-## Building the hardware interface
 Line6's hardware uses the a so-called asynchronous serial communication over RS-485 to exchange messages between their multi-effect/amp-devices and the pedals like the Shortboard, Shortboard MkII, FBV3, Longboard or the Fbv Express. Unfortunately, sending serial data over RS-485 is not possible using a standard computer. Therefore, an interface for converting the PC's TTL data to the electrical characteristics of the RS-485 standard is necessary. Luckily, RS-485 is a widely used standard and there are plenty of converter modules available. 
 
 Besides RS-485 communication, each pedal needs a suply voltage of 7,5V. In Line6's ecosystem, the multi-effect/amp-device powers the connected board by providing the desired voltage over the Ethernet cable. Since we are going to replace Line6's multi-effect/amp-device in this project, we need to provide the power supply for the pedal as well.
 
+## Building the hardware interface
 ### Components/Shopping List
 
-1. [USB to RS485 TTL Serial Converter (left) + DC 5V to DC 9V Step up Converter (right)](https://user-images.githubusercontent.com/34777492/34322801-440f99c8-e832-11e7-92da-da0167ba90af.jpg)
-
-2. [USB cable](https://user-images.githubusercontent.com/34777492/34322802-4428a06c-e832-11e7-8e62-c2bfff472aa1.jpg)
-
-3. [Standard Ethernet Cable](https://user-images.githubusercontent.com/34777492/34322803-44413c94-e832-11e7-9c87-09f73d2281ce.jpg)
+1. USB to RS485 TTL Serial Converter
+2. DC 5V to DC 9V Step up Converter
+3. USB A to B printer/scanner cable
+4. RJ45 Ethernet Cable
 
 ### Wiring diagram
 
