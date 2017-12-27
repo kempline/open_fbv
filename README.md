@@ -9,19 +9,21 @@ Besides RS-485 communication, each pedal needs a suply voltage of 7,5V. In Line6
 
 ### Components/Shopping List
 
-1. USB to RS485 TTL Serial Converter: There are plenty of those modules available, e.g. ebay.com. I tested modules with the following description: USB to RS485 TTL Serial Converter Adapter FTDI interface FT232RL 75176 Module.
-2. DC 5V to DC 9V Step up Converter: Again, there are many different variants of such modules available online. I just picked one randomly and made good experiences with the step up converter.
-3. USB A to B printer/scanner cable
-4. RJ45 Ethernet Cable
+1. [USB to RS485 TTL Serial Converter](https://user-images.githubusercontent.com/34777492/34389576-af109118-eb3a-11e7-8934-84c580e42ed4.jpg): There are plenty of those modules available, e.g. at ebay.com. I tested modules with the following description: USB to RS485 TTL Serial Converter Adapter FTDI interface FT232RL 75176 Module.
+2. [DC 5V to DC 9V Step up Converter](https://user-images.githubusercontent.com/34777492/34389577-b03c207a-eb3a-11e7-9d03-2a6f2239754e.jpg): Again, there are many modules available online. I just picked one randomly and made good experiences with it.
+3. [USB A to B printer/scanner cable](https://user-images.githubusercontent.com/34777492/34389579-b0fd28ec-eb3a-11e7-9c15-5f4ba5016eaa.jpg)
+4. [RJ45 Ethernet Cable](https://user-images.githubusercontent.com/34777492/34389574-abcea9cc-eb3a-11e7-84da-a91b5ddbda16.jpg)
 
 ### Wiring diagram
 
-Here's the wiring diagram following TIA/EIA 568b's Wiring Color Codes. If your Ethernet cable uses another color coding scheme you have to translate the given colors to TIA/EIA 568b. I successfully tested the wiring using the following foot controllers: 
+Here's the wiring diagram following TIA/EIA 568b's Wiring Color Codes. If your Ethernet cable uses another color coding scheme you have to translate the given colors to TIA/EIA 568b. 
+
+__Please note: First generation of Line6's foot controllers__ didn't work reliable for me using this wiring scheme. I don't have a proven answer why but I guess these controllers can't operate in "half-duplex" mode. My Shortboard (Mk1) runs properly if I don't connect the green/white wire to "A" and leave it unconnected instead.
+
+Successfully tested with: 
 - FBV Express Mk2
 - Shortboard Mk2
 - FBV3
-
-__Please note: First generation of Line6's foot controllers__ didn't work reliable for me using the following wiring scheme. I don't have a proven answer why this happens but I believe these controllers are not able to communicate in "half-duplex" mode. I was able to get my Shortboard (Mk1) to run properly if I simply don't connect the green/white wire to "A" and left it unconnected instead. 
 
 ```
                                      _________________________________
