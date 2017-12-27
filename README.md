@@ -40,7 +40,9 @@ Here's the wiring diagram following TIA/EIA 568b's Wiring Color Codes. If your E
 ### Bringing it all together
 - Cut one end of the Ethernet cable, strip the isolation from each wire
 - Cut the DC plug from the step-up module and strip the isolation
-- Connect the unisolated wires from the Ethernet cable according to the wiring diagram. As an alternative to using the step-up module it is also possible to use a wall power supply. Just make sure you're using proper polarity. Every voltage between 7,5V and 9V is fine.
+- Connect the unisolated wires from the Ethernet cable according to the wiring diagram to the serial to RS485 converter as well as the step up module. It is s also possible to use a wall power supply instead of the step up module. Just make sure you're using proper polarity. Every voltage between +7,5V and +9V should be fine.
+- Connect the serial to RS485 module to the computer using the USB A to B printer/scanner cable
+- Connect the setp up module to the computer
 
 ### Testing the hardware
 
