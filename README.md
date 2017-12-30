@@ -62,8 +62,8 @@ Tested on
 
 ### Installation instructions
 ```
-git clone --recursive https://github.com/kempline/open_kpa.git
-cd open_kpa
+git clone --recursive https://github.com/kempline/open_fbv.git
+cd open_fbv
 pip install serial
 ```
 ### First run of fbv_tester.py
