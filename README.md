@@ -51,7 +51,65 @@ Successfully tested with:
 - Connect the unisolated wires from the Ethernet cable according to the wiring diagram to the serial to RS485 converter as well as the step up module. It is s also possible to use a wall power supply instead of the step up module. Just make sure you're using proper polarity. Every voltage between +7,5V and +9V should be fine.
 - Connect the serial to RS485 module to the computer using the USB A to B printer/scanner cable
 - Connect the setp up module to the computer. I was a little bit afraid that I might damage my computer by plugging the step-up module into one of the USB ports. For me it worked very well using the following hardware: Raspberry Pi 3, Rasperry Pi Zero with a USB hub, Mac mini 2011, iMac 2009. If you are still afraid of damaging your hardware, you can also plug the step up converter into an external USB power supply, e.g. one that is used for charging mobile devices.
-- If you have a voltage measurement devive at hand, make sure the 9V operating power (orange-orange/white and blue/white-blue) have proper polarity. The FBV needs 9V, not -9V!
+- If you have a voltage measurement device at hand, make sure the 9V operating power (orange-orange/white and blue/white-blue) have proper polarity. The FBV needs 9V, not -9V!
 - Finally, connect the Ethernet cable to the FBV. It should start-up by just showing a message in the display. If there is no reaction for more than 2secs remove the Ethernet cable IMMEDIATELY and check your wiring.
 
+## Get the software
+Tested on Raspberry Pi 3 and Raspberry zero as well as various macOS installations.
+### Installation instructions
+```
+git clone --recursive https://github.com/kempline/open_kpa.git
+cd open_kpa
+pip install serial
+```
+### First run of fbv_tester.py
+The python program fbv_tester expects only one parameter: the serial port for the serial to RS485 converter module. On Unix platforms, the interface gets mounted in the operating system's /dev/ derictory. Just connect both USBs to your computer and run the following command in a terminal:
+```
+ls -l /dev/tty.usb*
+```
+You should see an output comparable to:
+```
+mac135:~ sbg$ ls -l /dev/tty.usb*
+crw-rw-rw-  1 root  wheel   17,   0 Dec 30 12:59 /dev/tty.usbserial-A93XMWXN
+mac135:~ sbg$ 
+```
+As far as I can tell, each converter has it's own identifier, here A93XMWXN. However, simply copy the full path (/dev/tty.usbserial-A93XMWXN) and start open_fbv_tester.py with it, e.g.:
+```
+open_fbv_tester.py /dev/tty.usbserial-A93XMWXN
+```
+If you're using a pedal with a 16ch display you should see the following message:
+```
+ 123 open fbv rocks!
+```
+This basically means that the communication between your computer and the FBV works properly. Next, you might want to move the pedal up and down. You should see something like this in the terminal window:
+```
+2017-12-30 13:06:36 - INFO - pedal: 0 moved: 126
+2017-12-30 13:06:36 - INFO - pedal: 0 moved: 121
+2017-12-30 13:06:36 - INFO - pedal: 0 moved: 112
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 103
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 94
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 90
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 89
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 91
+2017-12-30 13:06:37 - INFO - pedal: 0 moved: 92
+```
+If you get this output, the communication from the board to your computer works as well. Congratulations :-)
+
+Next, try the basic features 
+- switch clicked
+```
+2017-12-30 13:06:38 - INFO - switch: 97, value: 1
+2017-12-30 13:06:38 - INFO - switch: 97, value: 0
+```
+- switch double clicked
+```
+2017-12-30 13:06:40 - INFO - switch double clicked: 97
+```
+- switch hold
+```
+2017-12-30 13:13:11 - INFO - switch: 48, value: 1
+2017-12-30 13:13:14 - INFO - switch hold: 48
+```
+
+## What's next?
 
