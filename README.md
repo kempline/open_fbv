@@ -50,12 +50,16 @@ Successfully tested with:
 - Cut the DC plug from the step-up module and strip the isolation
 - Connect the unisolated wires from the Ethernet cable according to the wiring diagram to the serial to RS485 converter as well as the step up module. It is s also possible to use a wall power supply instead of the step up module. Just make sure you're using proper polarity. Every voltage between +7,5V and +9V should be fine.
 - Connect the serial to RS485 module to the computer using the USB A to B printer/scanner cable
-- Connect the setp up module to the computer. I was a little bit afraid that I might damage my computer by plugging the step-up module into one of the USB ports. For me it worked very well using the following hardware: Raspberry Pi 3, Rasperry Pi Zero with a USB hub, Mac mini 2011, iMac 2009. If you are still afraid of damaging your hardware, you can also plug the step up converter into an external USB power supply, e.g. one that is used for charging mobile devices.
+- Connect the setp up module to the computer. I was worried about damaging my computer by plugging the step-up module into one of the USB ports. However, there have been no problems. If you still worry, you can also plug the step up converter into an external USB power supply, e.g. one that is used for charging mobile devices.
 - If you have a voltage measurement device at hand, make sure the 9V operating power (orange-orange/white and blue/white-blue) have proper polarity. The FBV needs 9V, not -9V!
 - Finally, connect the Ethernet cable to the FBV. It should start-up by just showing a message in the display. If there is no reaction for more than 2secs remove the Ethernet cable IMMEDIATELY and check your wiring.
 
 ## Get the software
-Tested on Raspberry Pi 3 and Raspberry zero as well as various macOS installations.
+Tested on 
+- Raspberry Pi 3
+- Raspberry Pi Zero 
+- various macOS installations.
+
 ### Installation instructions
 ```
 git clone --recursive https://github.com/kempline/open_kpa.git
