@@ -64,7 +64,7 @@ Tested on
 ```
 git clone --recursive https://github.com/kempline/open_fbv.git
 cd open_fbv
-pip install serial
+pip install pyserial
 ```
 ### First run of fbv_tester.py
 The python program fbv_tester expects only one parameter: the serial port for the serial to RS485 converter module. On Unix platforms, the interface gets mounted in the operating system's /dev/ derictory. Just connect both USBs to your computer and run the following command in a terminal:
