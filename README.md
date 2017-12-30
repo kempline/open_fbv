@@ -79,7 +79,7 @@ mac135:~ sbg$
 ```
 As far as I can tell, each converter has it's own identifier, here A93XMWXN. However, simply copy the full path (/dev/tty.usbserial-A93XMWXN) and start open_fbv_tester.py with it, e.g.:
 ```
-open_fbv_tester.py /dev/tty.usbserial-A93XMWXN
+python open_fbv_tester.py /dev/tty.usbserial-A93XMWXN
 ```
 If you're using a pedal with a 16ch display you should see the following message:
 ```
