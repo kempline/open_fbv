@@ -1,0 +1,12 @@
+**/.AppleDouble
+
+# Byte-compiled / optimized / DLL files
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+node_modules/
+
+.DS_Store
